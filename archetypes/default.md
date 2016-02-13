@@ -1,7 +1,10 @@
 +++
-tags = ["x", "y"]
-categories = ["x", "y"]
+tags = [
+]
+categories = [
+]
 description = ""
 slug = ""
+draft = true
 
 +++
