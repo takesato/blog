@@ -1,0 +1,24 @@
+baseurl = "https://takesato.github.io/blog"
+languageCode = "ja-JP"
+title = "takesato's blog"
+
+theme = "hugo_theme_beg"
+MetaDataFormat = "toml"
+canonifyurls = true
+paginate = 3
+
+[author]
+  name = "takehito sato"
+
+[permalinks]
+  post = "/:slug/"
+
+[indexes]
+  category = "categories"
+
+[params]
+  toc = true
+  highlight = "sunburst"
+
+  twitter = "https://twitter.com/takesato"
+  github = "https://github.com/takesato"

@@ -1,0 +1,32 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+    only:
+      - master
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init --recursive
+
+machine:
+  timezone: Asia/Tokyo
+
+dependencies:
+  pre:
+    - go get -v github.com/spf13/hugo
+    - git config --global user.name "CircleCI"
+    - git config --global user.email "circleci@example.com"
+
+test:
+  override:
+    - hugo check
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - git clone -b gh-pages git@github.com:takesato/blog.git public
+      - hugo
+      - cd public && git add . && git commit -m "publish on `TZ=JST-9 date '+%Y/%m/%d %H:%M:%S'`" && git push origin gh-pages
