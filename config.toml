@@ -2,7 +2,7 @@ baseurl = "https://takesato.github.io/blog"
 languageCode = "ja-JP"
 title = "takesato's blog"
 
-theme = "hugo_theme_beg"
+theme = "hugo-bearcub"
 MetaDataFormat = "toml"
 canonifyurls = true
 paginate = 3
