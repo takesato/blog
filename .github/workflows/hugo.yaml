@@ -47,6 +47,12 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: patch theme script
+        run: |
+          mv script.patch ./hugo-tranquilpeak-theme/
+          cd hugo-tranquilpeak-theme
+          patch -p1 -f < script.patch
+        working-directory: ./themes
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
