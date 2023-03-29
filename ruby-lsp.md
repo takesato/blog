@@ -105,3 +105,8 @@ rebornix.ruby に依存していた．こいつ止めるには `rebornix.ruby` �
         - ひとまずなくてもいいな
 - language configuration
     - これもなんだ?
+
+
+---
+
+devcontainer 上で ruby-lsp 起動しないのだけ気になる
